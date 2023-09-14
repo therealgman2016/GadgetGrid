@@ -1,6 +1,7 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
 }
 
 a {
@@ -8,19 +9,55 @@ a {
 }
 
 #title {
-  width: 1710px;
-  height: 181px;
+  margin: 1%;
+  display: flex;
+  width: auto;
+  height: auto;
   background: #D9D9D9;
+  margin-bottom: 5px;
+  flex-direction: column;
+  align-items: center;
 }
 
-#titleTxt {
-  width: 1239px;
-  height: 113px;
+#title-txt{
+  display: flex;
+  width: fit-content;
+  height: 100%;
   color: #000;
   font-family: Inter;
   font-size: 96px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 5px;
+}
+
+#nav {
+  display: flex;
+  background-color: #B48686;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+  padding: 7px;
+}
+
+button{
+  display: inline-block;
+  padding: 5px;
+  height: 5%;
+  width: 10%;
   text-align: center;
+  background: #D9D9D9;
+  font-size: large;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #DA4A4A; 
+  color: white;
+}
+
+#add-item{
+  visibility: hidden;
 }
