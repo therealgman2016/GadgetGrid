@@ -1,11 +1,11 @@
 require('dotenv').config();
-require('./config/database');
+require('../config/database');
 
-const Movie = require('./models/movie');
-const Performer = require('./models/performer');
+const Movie = require('../models/movie');
+const Performer = require('../models/performer');
 
 // For better organization, the seed data is being stored in a separate data.js module
-const data = require('./data');
+const data = require('../data');
 
 // await needs an async function - use an async IIFE!
 (async function() {

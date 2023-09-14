@@ -10,7 +10,7 @@ module.exports = {
 
 async function index(req, res) {
   const movies = await Movie.find({});
-  res.render('movies/index', { title: 'All Movies', movies });
+  res.render('movies/index', { title: 'GadgetGrid', movies });
 }
 
 async function show(req, res) {
