@@ -16,7 +16,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #166973;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -29,6 +29,7 @@ nav > img {
   height: fit-content;
   object-fit: contain;
   margin-right: auto;
+  background-color: grey;
 }
 
 body > main {
@@ -36,7 +37,7 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: lightgray;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -66,6 +67,7 @@ nav > a.active {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
+  
 }
 
 #new-form *,
@@ -174,6 +176,7 @@ hr {
   justify-content: center;
   align-items: center;
   height: 34px;
+  background-color: lightgray;
 }
 
 .login img {
@@ -189,4 +192,8 @@ hr {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+#navBox {
+  background-color: lightgray;
 }
