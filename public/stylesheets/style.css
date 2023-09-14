@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+#title {
+  width: 1710px;
+  height: 181px;
+  background: #D9D9D9;
+}
+
+#titleTxt {
+  width: 1239px;
+  height: 113px;
+  color: #000;
+  font-family: Inter;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
