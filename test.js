@@ -1,38 +1,41 @@
-const Box = require('./models/box')
-const Item = require('./models/item')
+require('dotenv').config();// loads env file
+require('./config/database'); // loads database connection
 
-// create an Item document
-const newItem = new Item({
-    name: 'hdmi',
-    type: 'hdmi',
-    dateAdded: '09/14/23',
-    location: 'LTS'
-})
+const Box = require('./models/box');
+const Item = require('./models/item');
 
-// save the Item document
-newItem.save((err, savedItem) => {
-    if (err) {
-        console.error(err)
-    } else {
-        // create Box document and copy relavent info from Item
-        const newBox = new Box({
-            name: 'LTS',
-            itemProperties: {
-                name: savedItem.name,
-                type: savedItem.type,
-                dateAdded: savedItem.dateAdded,
-                location: savedItem.location
-            }
-        })
-    }
+async function createItemAndBox() {
+  try {
+    // Create an Item document
+    const newItem = new Item({
+      name: 'Item 1',
+      type: 'Type 1',
+      dateAdded: new Date(),
+      location: 'Location 1',
+      // other item properties
+    });
 
-    // save the Box
-    newBox.save((err, savedBox) => {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log('Box saved with assositated Item properties', savedBox)
-        }
-    })
-})
+    // Save the Item document
+    const savedItem = await newItem.save();
 
+    // Create a Box document and copy relevant properties from the Item
+    const newBox = new Box({
+      name: 'LTS',
+      itemProperties: {
+        name: savedItem.name,
+        type: savedItem.type,
+        dateAdded: savedItem.dateAdded,
+        location: savedItem.location,
+      },
+    });
+
+    // Save the Box document
+    await newBox.save(); // You can await here to ensure it's saved
+
+    console.log('Box saved with associated Item properties:', newBox);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+createItemAndBox();
