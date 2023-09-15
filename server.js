@@ -42,6 +42,13 @@ app.use(function (req, res, next) {
 });
 
 
+app.get('/', (req, res) => {
+  // Check if the user is authenticated and store this information
+  const isAuthenticated = req.isAuthenticated(); // Assuming you have set up Passport.js for authentication
+
+  // Pass the user's authentication status and any other necessary data to the template
+  res.render('index.ejs', { isAuthenticated });
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
