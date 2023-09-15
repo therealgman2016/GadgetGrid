@@ -4,8 +4,9 @@ const Schema = mongoose.Schema
 const itemSchema = new Schema({
     name: String,
     type: String,
-    // dateAdded: String,
-    location: String
+    location: String,
+    dateAdded: String
+
 }, {
     timestamps: true
 })
