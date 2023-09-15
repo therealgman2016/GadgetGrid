@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const itemSchema = new Schema({
     name: String,
     type: String,
-    dateAdded: String,
+    // dateAdded: String,
     location: String
 }, {
     timestamps: true
