@@ -1,28 +1,26 @@
 <%- include('../partials/header') %>
+  <div class="item-list">
+    <div class="item-header">
+      <div class="item-header-cell" id="name">Name</div>
+      <div class="item-header-cell" id="type">Type</div>
+      <div class="item-header-cell" id="location">Location</div>
+      <div class="item-header-cell" id="date-added">Date Added</div>
+    </div>
+    <div class="item-body">
+      <!-- Write the line of EJS to iterate over items using forEach -->
+      <% items.forEach(function(item) { %>
+        <div class="item-row">
+          <div class="item-cell"><%= item.name %></div>
+          <div class="item-cell"><%= item.type %></div>
+          <div class="item-cell"><%= item.location %></div>
+          <div class="item-cell"><%= item.dateAdded %></div>
+        </div>
+      <!-- Close the forEach using EJS here -->
+      <% }); %>
+    </div>
+  </div>
+  
+</div>
 
-<h2>Item list</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Location</th>
-      <th>Date Added</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Write the line of EJS to iterate over movies using forEach -->
-    <% items.forEach(function(i) { %>
-      <tr>
-        <td><%= i.name %></td>
-        <td><%= i.type %></td>
-        <td><%= i.location %></td>
-        <td><%= i.dateAdded %></td>
-      </tr>
-    <!-- Close the forEach using EJS here -->
-    <% }); %>
-  </tbody>
-</table>
 
 <%- include('../partials/footer') %>

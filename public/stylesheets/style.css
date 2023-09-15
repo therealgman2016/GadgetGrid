@@ -164,3 +164,223 @@ header {
   width: auto;
 }
 
+/* below is on the index pg, or click "all items"
+
+#item-list {
+  display: flex;
+  background-color: yellow;
+  height: auto;
+  width: auto;
+}
+
+tr {
+  display: flex;
+  background-color: #00B7FF;
+  height: auto;
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*below are in tr */
+/* #name {
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: #DA4A4A;
+}
+#type {
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: #DA4A4A;
+}
+#location {
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: #DA4A4A;
+}
+#date-added {
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: #DA4A4A;
+} */
+/*above are in tr */
+
+/* #info {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
+  flex-direction: row
+  align-items: center;
+
+}
+
+table {
+  display: flex;
+  height: 40%;
+  width: 40%;
+  background-color: slateblue;
+}
+
+thead {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+} */ 
+/* .item-list {
+  display: flex;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-header-cell {
+  display: flex;
+  background-color: blue;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: auto;
+  margin: 5px
+}
+
+#name {
+  display: flex;
+  background-color: yellow;
+}
+#type {
+  display: flex;
+  background-color: yellow;
+}
+#location {
+  display: flex;
+  background-color: yellow;
+}
+#date-added {
+  display: flex;
+  background-color: yellow;
+}
+
+.item-body {
+  display: flex;
+  background-color: aqua;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.item-row {
+  display: flex;
+  background-color: darkred;
+  height: auto;
+  width: fit-content;
+}
+
+.item-cell {
+  display: flex;
+  height: auto;
+  width: fit-content;
+  padding: 5px;
+  margin: 5%
+} */
+
+.item-list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.item-header {
+  background-color: #f0f0f0;
+  display: flex;
+  font-weight: bold;
+}
+
+.item-header-cell {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-cell {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+}
+/* Style the form container */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form heading */
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style form inputs and select */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Style error message */
+p {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
